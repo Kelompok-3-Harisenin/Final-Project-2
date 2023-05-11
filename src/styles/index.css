@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .grid-container {
+    background-color: transparent;
+  }
+  .inside-container {
+    background-color: #f6f6f6;
+  }
+
+  .colorprice {
+    color: #e32c2b;
+  }
+
+  .hero-img {
+    background-image: url("assets/Homepage/Hero.jpg");
+  }
+}
