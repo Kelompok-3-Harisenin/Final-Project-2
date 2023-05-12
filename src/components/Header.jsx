@@ -3,16 +3,18 @@ import {props} from 'react'
 import HamburgerNav from './HamburgerNav'
 
 
-const Header = () => {
+
+const Header = (props) => {
   return (
     <>
-    
+
     <div className=" pt-5">
           <div className=" container mx-auto flex justify-between items-center">
             <button
               href=""
               className="burger text-slate-900 relative w-[30px] h-[30px] bottom-[10px]"
               id='hamburger-menu'
+              onClick={()=>props.hamburgerClick()}
             >
               <div
                 className="burger-icon absolute block h-[2px] top-[17px] bg-white w-5 left-1"
@@ -24,6 +26,7 @@ const Header = () => {
                 className="burger-icon absolute block h-[2px] top-[31px] bg-white w-5 left-1"
               ></div>
             </button>
+            
             <button href="" className="logo">
               <img
                 className="max-h-14 max-w-[240px] sm:pl-12 pl-12"

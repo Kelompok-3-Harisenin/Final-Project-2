@@ -28,7 +28,7 @@
     width: 17rem;
     height: 100vh;
     transition: 0.3s;
-    opacity: 1;
+    opacity: 0;
     z-index: 999;
   }
 
@@ -41,7 +41,7 @@
   }
 
   .hamburger-nav.active {
-    right: 0;
+    left: 0;
     opacity: 1;
     transition: 0.5s;
   }
