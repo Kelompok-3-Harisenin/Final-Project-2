@@ -1,27 +1,26 @@
-import React from 'react'
-import Header from './Header'
+import React from "react";
+import Header from "./Header";
+import HamburgerNav from "./HamburgerNav";
+
+
 
 const Homepage = () => {
   return (
     <>
-
-<body>
-<div class="hero-img min-h-screen bg-cover bg-no-repeat bg-center">
-  <Header/>
-      <div class="hero-content w-full h-screen flex justify-center">
-        <a
-          href=""
-          class="button my-auto text-white border bg-[#1f2021] py-3 px-5 font-medium"
-        >
-          SHOP NOW
-        </a>
-      </div>
-    </div>
-
-
-</body>
+        <div className="hero-img min-h-screen bg-cover bg-no-repeat bg-center">
+        <Header />
+          <div className="h-screen flex justify-center">
+            <button
+              href=""
+              className="button my-auto text-white border bg-[#1f2021] py-3 px-5 font-medium"
+            >
+              SHOP NOW
+            </button>
+          </div>
+        </div>
+     
     </>
-    )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;

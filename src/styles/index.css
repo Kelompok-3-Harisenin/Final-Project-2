@@ -18,3 +18,31 @@
     background-image: url("assets/Homepage/Hero.jpg");
   }
 }
+
+@layer utilities {
+  .hamburger-nav {
+    background-color: #18020c;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 17rem;
+    height: 100vh;
+    transition: 0.3s;
+    opacity: 1;
+    z-index: 999;
+  }
+
+  .hamburger-text {
+    color: #bbcbcb;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .hamburger-nav.active {
+    right: 0;
+    opacity: 1;
+    transition: 0.5s;
+  }
+}

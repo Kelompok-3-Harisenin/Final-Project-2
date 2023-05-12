@@ -4,11 +4,15 @@ import Homepage from './components/Homepage'
 import Footer from './components/Footer'
 import Login from './components/Login'
 import Header from './components/Header'
+import HamburgerNav from './components/HamburgerNav'
 
 function App() {
-
+ 
   return (
     <>
+
+<HamburgerNav/>
+
       <Router>
         <Routes>
           <Route path='/' element={<Homepage/>}></Route>
@@ -16,6 +20,7 @@ function App() {
         </Routes>
       </Router>
       <Footer/>
+
     </>
   )
 }
