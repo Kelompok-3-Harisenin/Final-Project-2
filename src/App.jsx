@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Homepage from './components/Homepage'
 import Footer from './components/Footer'
 import Login from './components/Login'
+import Header from './components/Header'
 
 function App() {
 
