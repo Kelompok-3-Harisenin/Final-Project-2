@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, props } from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Homepage from './components/Homepage'
 import Footer from './components/Footer'
@@ -8,13 +8,12 @@ import HamburgerNav from './components/HamburgerNav'
 
 
 
-
 function App() {
- 
+  
   return (
     <>
 
-<HamburgerNav/>
+
 
       <Router>
         <Routes>

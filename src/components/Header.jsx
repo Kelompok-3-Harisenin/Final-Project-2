@@ -1,29 +1,39 @@
-import React from 'react'
-import {props} from 'react'
-import HamburgerNav from './HamburgerNav'
+
+import { useEffect, useState } from "react";
+import HamburgerNav from "./HamburgerNav";
 
 
 
-const Header = (props) => {
+ 
+  
+
+const Header = () => {
+  
+  const [navbarState,setNavbarState] = useState(false)
+  let toggleClassCheck = navbarState ? "hamburger-nav active" : "hamburger-nav";
+  
+
+
   return (
     <>
+<HamburgerNav toggleClassCheck={toggleClassCheck}/>
 
-    <div className=" pt-5">
+    <div className=" pt-5 fixed w-full z-50">
           <div className=" container mx-auto flex justify-between items-center">
             <button
               href=""
-              className="burger text-slate-900 relative w-[30px] h-[30px] bottom-[10px]"
+              className=" text-slate-900 relative w-[30px] h-[30px] bottom-[10px]"
               id='hamburger-menu'
-              onClick={()=>props.hamburgerClick()}
+              onClick={()=>setNavbarState(!navbarState)}
             >
               <div
-                className="burger-icon absolute block h-[2px] top-[17px] bg-white w-5 left-1"
+                className=" absolute block h-[2px] top-[17px] bg-white w-5 left-1"
               ></div>
               <div
-                className="burger-icon absolute block h-[2px] top-[24px] bg-white w-5 left-1"
+                className=" absolute block h-[2px] top-[24px] bg-white w-5 left-1"
               ></div>
               <div
-                className="burger-icon absolute block h-[2px] top-[31px] bg-white w-5 left-1"
+                className=" absolute block h-[2px] top-[31px] bg-white w-5 left-1"
               ></div>
             </button>
             

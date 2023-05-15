@@ -21,15 +21,15 @@
 
 @layer utilities {
   .hamburger-nav {
-    background-color: #18020c;
+    background-color: #232324;
     position: fixed;
-    top: 0;
+    top: 0px;
     left: -100%;
     width: 17rem;
     height: 100vh;
     transition: 0.3s;
-    opacity: 0;
-    z-index: 999;
+    opacity: 1;
+    z-index: 3;
   }
 
   .hamburger-text {
