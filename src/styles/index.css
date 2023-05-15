@@ -21,6 +21,7 @@
 
 @layer utilities {
   .hamburger-nav {
+  
     background-color: #232324;
     position: fixed;
     top: 0px;
@@ -28,8 +29,9 @@
     width: 17rem;
     height: 100vh;
     transition: 0.3s;
-    opacity: 1;
+    opacity: 0;
     z-index: 3;
+   
   }
 
   .hamburger-text {
@@ -44,5 +46,6 @@
     left: 0;
     opacity: 1;
     transition: 0.5s;
+  
   }
 }

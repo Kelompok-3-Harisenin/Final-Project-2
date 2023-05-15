@@ -22,7 +22,7 @@ const Header = () => {
           <div className=" container mx-auto flex justify-between items-center">
             <button
               href=""
-              className=" text-slate-900 relative w-[30px] h-[30px] bottom-[10px]"
+              className="flex text-slate-900 sm:hidden relative w-[30px] h-[30px] bottom-[10px] "
               id='hamburger-menu'
               onClick={()=>setNavbarState(!navbarState)}
             >
