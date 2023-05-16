@@ -4,7 +4,7 @@ import Homepage from './components/Homepage'
 import Footer from './components/Footer'
 import Login from './components/Login'
 import Header from './components/Header'
-
+import MainText, {Grid} from './components/Main'
 function App() {
 
   return (
@@ -15,6 +15,8 @@ function App() {
           <Route path='/login' element={<Login/>}></Route>
         </Routes>
       </Router>
+      <MainText/>
+      <Grid/>
       <Footer/>
     </>
   )
