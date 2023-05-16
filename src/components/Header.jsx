@@ -19,10 +19,10 @@ const Header = () => {
 <HamburgerNav toggleClassCheck={toggleClassCheck}/>
 
     <div className=" pt-5 fixed w-full z-50">
-          <div className=" container mx-auto flex justify-between items-center">
+          <div className=" container mx-auto flex justify-between items-center sm:px-0 px-10">
             <button
               href=""
-              className="flex text-slate-900 sm:hidden relative w-[30px] h-[30px] bottom-[10px] "
+              className=" flex text-slate-900 sm:hidden relative w-[30px] h-[30px] bottom-[10px] "
               id='hamburger-menu'
               onClick={()=>setNavbarState(!navbarState)}
             >
