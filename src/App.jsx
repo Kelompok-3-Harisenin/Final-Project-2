@@ -1,14 +1,19 @@
-import { useState } from 'react'
+import { useState, props } from 'react'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Homepage from './components/Homepage'
 import Footer from './components/Footer'
 import Login from './components/Login'
 import Header from './components/Header'
 import MainText, {Grid} from './components/Main'
-function App() {
+import HamburgerNav from './components/HamburgerNav'
 
+function App() {
+  
   return (
     <>
+
+
+
       <Router>
         <Routes>
           <Route path='/' element={<Homepage/>}></Route>
@@ -18,6 +23,7 @@ function App() {
       <MainText/>
       <Grid/>
       <Footer/>
+
     </>
   )
 }
