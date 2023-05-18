@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+
+import React, { useEffect, useState, useRef } from "react";
 import HamburgerNav from "./HamburgerNav";
 import * as Icon from 'react-feather';
 
@@ -6,17 +7,29 @@ const Header = () => {
   const [navbarState, setNavbarState] = useState(false);
   let toggleClassCheck = navbarState ? "hamburger-nav active" : "hamburger-nav";
 
+let menuRef = useRef();
+
+
+useEffect(() => {
+  let handler = (e)=>{
+    if(!menuRef.current.contains(e.target)){
+      setNavbarState(false);
+    }
+  };
+  document.addEventListener("mousedown", handler)
+})
 
 
 
   return (
     <>
-      <HamburgerNav toggleClassCheck={toggleClassCheck} />
-
-      <div className=" pt-5 fixed w-full z-50">
+    <div ref={menuRef}>
+      <HamburgerNav toggleClassCheck={toggleClassCheck}/>
+      </div>
+      <div className=" pt-5 absolute w-full z-20">
         <div className=" container mx-auto flex justify-between items-center sm:px-0 px-10">
 <button>
-  <Icon.Menu href="" className="flex text-white sm:hidden relative w-[30px] h-[30px] " id="hamburger-menu"
+  <Icon.Menu href="" className="flex text-white md:hidden relative w-[30px] h-[30px] " id="hamburger-menu"
   onClick={() => setNavbarState(!navbarState)}/>
 </button>
 

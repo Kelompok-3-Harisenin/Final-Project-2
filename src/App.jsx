@@ -4,6 +4,7 @@ import Homepage from './components/Homepage'
 import Footer from './components/Footer'
 import Login from './components/Login'
 import Header from './components/Header'
+import MainText, {Grid} from './components/Main'
 import HamburgerNav from './components/HamburgerNav'
 import AllProducts from './components/AllProducts'
 import Jacket from './components/Jacket'
@@ -12,8 +13,6 @@ import Shirt from './components/Shirt'
 import NewArrivals from './components/NewArrivals'
 import Accessories from './components/Accessories'
 import WrongPage from './components/WrongPage'
-
-
 
 function App() {
   
@@ -33,6 +32,8 @@ function App() {
           <Route path='/*' element={<WrongPage/>}></Route>
         </Routes>
       </Router>
+      <MainText/>
+      <Grid/>
       <Footer/>
 
     </>
