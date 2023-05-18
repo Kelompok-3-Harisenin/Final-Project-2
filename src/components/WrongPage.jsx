@@ -3,8 +3,10 @@ import React from 'react'
 const WrongPage = () => {
   return (
     <>
-    <div className='flex justify-center h-screen items-center align-middle'>
-    <h1 className='text-3xl items-center align-middle font-bold'>MAAF FITUR BELUM TERSEDIA / HALAMAN TIDAK DITEMUKAN</h1>
+    <div className='flex flex-col justify-center h-screen items-center align-middle'>
+    <h1 className='mx-auto text-3xl font-bold block'>MAAF FITUR BELUM TERSEDIA</h1>
+    <h1 className='mx-auto text-3xl font-bold block'>/</h1>
+    <h1 className='mx-auto text-3xl font-bold block'>HALAMAN TIDAK DITEMUKAN</h1>
     </div>
     </>
 

@@ -1,79 +1,172 @@
-
 import React, { useEffect, useState, useRef } from "react";
 import HamburgerNav from "./HamburgerNav";
-import * as Icon from 'react-feather';
+import * as Icon from "react-feather";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [navbarState, setNavbarState] = useState(false);
   let toggleClassCheck = navbarState ? "hamburger-nav active" : "hamburger-nav";
 
-let menuRef = useRef();
+  let menuRef = useRef();
 
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setNavbarState(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+  });
 
-useEffect(() => {
-  let handler = (e)=>{
-    if(!menuRef.current.contains(e.target)){
-      setNavbarState(false);
-    }
-  };
-  document.addEventListener("mousedown", handler)
-})
+  const [dropDownState, setDropDownState] = useState(false);
+  let toggleDropDown = dropDownState ? "dropdown-menu active" : "dropdown-menu";
+  let dropDownRef = useRef();
 
+  useEffect(() => {
+    let handler = (e) => {
+      if (!dropDownRef.current.contains(e.target)) {
+        setDropDownState(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+  });
+  const [dropDownState2, setDropDownState2] = useState(false);
+  let toggleDropDown2 = dropDownState2
+    ? "dropdown-menu2 active"
+    : "dropdown-menu2";
+  let dropDownRef2 = useRef();
 
+  useEffect(() => {
+    let handler = (e) => {
+      if (!dropDownRef2.current.contains(e.target)) {
+        setDropDownState2(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+  });
+
+  const navigate = useNavigate();
 
   return (
     <>
-    <div ref={menuRef}>
-      <HamburgerNav toggleClassCheck={toggleClassCheck}/>
+      <div ref={menuRef}>
+        <HamburgerNav toggleClassCheck={toggleClassCheck} />
       </div>
       <div className=" pt-5 absolute w-full z-20">
         <div className=" container mx-auto flex justify-between items-center sm:px-0 px-10">
-<button>
-  <Icon.Menu href="" className="flex text-white md:hidden relative w-[30px] h-[30px] " id="hamburger-menu"
-  onClick={() => setNavbarState(!navbarState)}/>
-</button>
+          <button>
+            <Icon.Menu
+              href=""
+              className="flex text-white md:hidden relative w-[30px] h-[30px] hover:text-[#232324]"
+              id="hamburger-menu"
+              onClick={() => setNavbarState(!navbarState)}
+            />
+          </button>
 
-          <button href="" className="logo mb-2 ">
+          <button href="" className="logo mb-2 " onClick={() => navigate("/")}>
             <img
-              className="max-h-14 max-w-[240px] sm:left-12 ml-12 "
+              className="max-h-14 max-w-[240px] sm:left-12 ml-12 sm:ml-0"
               src="/assets/Homepage/hero-logo.png"
               alt=""
             />
           </button>
 
           <div className="flex text-white gap-2 ">
-            <a className=" h-7 hidden md:block text-xl px-3 hover:text-[#232324]" href="">
+            <button
+              onClick={() => navigate("/")}
+              className=" h-7 hidden md:block text-xl px-3 hover:text-[#232324]"
+              href=""
+            >
               HOME
-            </a>
-
-            <div className="dropdown w-32 hidden md:flex" data-dropdown> 
-            <button className="nav-link h-7 text-xl pl-7 w-full flex" data-dropdown-button href="">
-              SHOP <div className="mt-2 ml-2"><Icon.ArrowDown size={12}/></div>
             </button>
-            <div className="dropdown-menu text-lg">
-              <button className="block hover:text-gray-600"> New Arrivals</button>
-              <button className="block hover:text-gray-600"> T-Shirt</button>
-              <button className="block hover:text-gray-600"> Shirt</button> 
-              <button className="block hover:text-gray-600"> Sweater</button> 
-              <button className="block hover:text-gray-600"> Polo Shirt</button> 
-              <button className="block hover:text-gray-600"> Jacket</button> 
-              <button className="block hover:text-gray-600"> Pants</button> 
-              <button className="block hover:text-gray-600"> Blue Series</button> 
-              <button className="block hover:text-gray-600"> Accessories</button> 
-              <button className="block hover:text-gray-600"> All Product</button> 
-            </div>
+
+            <div className="dropdown w-32 hidden md:flex">
+              <button
+                onClick={() => setDropDownState(!dropDownState)}
+                className="nav-link h-7 text-xl pl-7 w-full flex"
+                href=""
+              >
+                SHOP{" "}
+                <div className="mt-2 ml-2">
+                  <Icon.ArrowDown size={12} />
+                </div>
+              </button>
+              <div className={`${toggleDropDown} text-lg`} ref={dropDownRef}>
+                <button
+                  className="block hover:text-gray-600"
+                  onClick={() => navigate("/new-arrivals")}
+                >
+                  {" "}
+                  New Arrivals
+                </button>
+                <button
+                  className="block hover:text-gray-600"
+                  onClick={() => navigate("/t-shirt")}
+                >
+                  {" "}
+                  T-Shirt
+                </button>
+                <button
+                  className="block hover:text-gray-600"
+                  onClick={() => navigate("/shirt")}
+                >
+                  {" "}
+                  Shirt
+                </button>
+                {/* <button className="block hover:text-gray-600"> Sweater</button>  */}
+                {/* <button className="block hover:text-gray-600"> Polo Shirt</button>  */}
+                <button
+                  className="block hover:text-gray-600"
+                  onClick={() => navigate("/jacket")}
+                >
+                  {" "}
+                  Jacket
+                </button>
+                {/* <button className="block hover:text-gray-600"> Pants</button>  */}
+                {/* <button className="block hover:text-gray-600"> Blue Series</button>  */}
+                <button
+                  className="block hover:text-gray-600"
+                  onClick={() => navigate("/accessories")}
+                >
+                  {" "}
+                  Accessories
+                </button>
+                <button
+                  className="block hover:text-gray-600"
+                  onClick={() => navigate("/all-products")}
+                >
+                  {" "}
+                  All Product
+                </button>
+              </div>
             </div>
 
             <div className="dropdown">
-            <button className="nav-link h-7 hidden md:flex text-xl " href="">
-              GOOD VIBRATIONS <div className="mt-2 ml-2"><Icon.ArrowDown size={12}/></div>
-            </button>
-            <div className="dropdown-menu ">
-              <button className="hover:text-gray-600 "> Good Vibrations Vol 3</button>
-            </div>
+              <button
+                onClick={() => setDropDownState2(!dropDownState2)}
+                className="nav-link h-7 hidden md:flex text-xl "
+                href=""
+              >
+                GOOD VIBRATIONS{" "}
+                <div className="mt-2 ml-2">
+                  <Icon.ArrowDown size={12} />
+                </div>
+              </button>
+              <div className={`${toggleDropDown2}`} ref={dropDownRef2}>
+                <button
+                  className="hover:text-gray-600 "
+                  onClick={() => navigate("/new-arrivals")}
+                >
+                  {" "}
+                  Good Vibrations Vol 3
+                </button>
+              </div>
             </div>
 
-            <a className=" h-7 hidden md:block text-xl px-3 hover:text-[#232324]" href="">
+            <a
+              className=" h-7 hidden md:block text-xl px-3 hover:text-[#232324]"
+              href=""
+            >
               MAGAZINE
             </a>
 

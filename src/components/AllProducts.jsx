@@ -18,7 +18,7 @@ const AllProducts = () => {
      <>
      <div className='bg-slate-400 h-[67px]'><Header/></div>
      
-    <div className='py-2'>
+    <div className='py-10'>
       <div className="flex flex-col md:flex-row items-center justify-center">
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
        {products.map(item => (
