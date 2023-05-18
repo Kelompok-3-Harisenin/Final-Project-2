@@ -26,7 +26,7 @@ const AllProductsList = ({
         className="w-full h-36 md:h-48 object-cover mt-4"
       />
       <div className="w-full py-5 px-8">
-        <h2 className="text-xl md:text-2xl pt-2 md:mb-1 font-normal text-center">
+        <h2 className="text-l md:text-xl pt-2 md:mb-1 font-normal text-center">
           {title}
         </h2>
         <h2 className="text-center text-l md:text-xl font-semibold">
