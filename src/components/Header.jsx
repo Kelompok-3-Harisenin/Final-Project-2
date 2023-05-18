@@ -7,21 +7,7 @@ const Header = () => {
   let toggleClassCheck = navbarState ? "hamburger-nav active" : "hamburger-nav";
 
 
-// document.addEventListener('click', e => {
-//   const isDropdownButton = e.target.matches("[data-dropdown-button]")
-//   if (!isDropdownButton && e.target.closest ('[data-dropdown]') != null) return
 
-//   let currentDropdown
-//   if (isDropdownButton) {
-//     currentDropdown = e.target.closest('[data-dropdown]')
-//     currentDropdown.className.toggle('active')
-//   }
-
-//   document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
-//     if (dropdown === currentDropdown) return
-//     dropdown.className.remove('active')
-//   })
-// })
 
   return (
     <>
@@ -34,16 +20,7 @@ const Header = () => {
   onClick={() => setNavbarState(!navbarState)}/>
 </button>
 
-          {/* <button
-            href=""
-            className=" flex text-slate-900 sm:hidden relative w-[30px] h-[30px] bottom-[10px] "
-            id="hamburger-menu"
-            onClick={() => setNavbarState(!navbarState)}
-          >
-            <div className=" absolute block h-[2px] top-[17px] bg-white w-5 left-1"></div>
-            <div className=" absolute block h-[2px] top-[24px] bg-white w-5 left-1"></div>
-            <div className=" absolute block h-[2px] top-[31px] bg-white w-5 left-1"></div>
-          </button> */}
+       
 
           <button href="" className="logo mb-2 ">
             <img

@@ -13,10 +13,11 @@ const formatThousand = num => {
 };
 
 
-
 const AllProducts = () => {
   return (
-    <>
+     <>
+     <Header/>
+    <div className='pt-[67px]'>
       <div className="flex flex-col md:flex-row items-center justify-center">
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
        {products.map(item => (
@@ -31,6 +32,7 @@ const AllProducts = () => {
           />
        ))}
     </div>
+ </div>
  </div>
  </>
   )
