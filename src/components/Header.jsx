@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+
+import React, { useEffect, useState, useRef } from "react";
 import HamburgerNav from "./HamburgerNav";
 import * as Icon from 'react-feather';
 
@@ -6,44 +7,29 @@ const Header = () => {
   const [navbarState, setNavbarState] = useState(false);
   let toggleClassCheck = navbarState ? "hamburger-nav active" : "hamburger-nav";
 
+let menuRef = useRef();
 
-// document.addEventListener('click', e => {
-//   const isDropdownButton = e.target.matches("[data-dropdown-button]")
-//   if (!isDropdownButton && e.target.closest ('[data-dropdown]') != null) return
+useEffect(() => {
+  let handler = (e)=>{
+    if(!menuRef.current.contains(e.target)){
+      setNavbarState(false);
+    }
+  };
+  document.addEventListener("mousedown", handler)
+})
 
-//   let currentDropdown
-//   if (isDropdownButton) {
-//     currentDropdown = e.target.closest('[data-dropdown]')
-//     currentDropdown.className.toggle('active')
-//   }
-
-//   document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
-//     if (dropdown === currentDropdown) return
-//     dropdown.className.remove('active')
-//   })
-// })
 
   return (
     <>
-      <HamburgerNav toggleClassCheck={toggleClassCheck} />
-
-      <div className=" pt-5 fixed w-full z-50">
+    <div ref={menuRef}>
+      <HamburgerNav toggleClassCheck={toggleClassCheck}/>
+      </div>
+      <div className=" pt-5 absolute w-full z-20">
         <div className=" container mx-auto flex justify-between items-center sm:px-0 px-10">
 <button>
-  <Icon.Menu href="" className="flex text-white sm:hidden relative w-[30px] h-[30px] " id="hamburger-menu"
+  <Icon.Menu href="" className="flex text-white md:hidden relative w-[30px] h-[30px] " id="hamburger-menu"
   onClick={() => setNavbarState(!navbarState)}/>
 </button>
-
-          {/* <button
-            href=""
-            className=" flex text-slate-900 sm:hidden relative w-[30px] h-[30px] bottom-[10px] "
-            id="hamburger-menu"
-            onClick={() => setNavbarState(!navbarState)}
-          >
-            <div className=" absolute block h-[2px] top-[17px] bg-white w-5 left-1"></div>
-            <div className=" absolute block h-[2px] top-[24px] bg-white w-5 left-1"></div>
-            <div className=" absolute block h-[2px] top-[31px] bg-white w-5 left-1"></div>
-          </button> */}
 
           <button href="" className="logo mb-2 ">
             <img

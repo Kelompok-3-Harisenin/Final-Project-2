@@ -6,15 +6,12 @@ import Header from './Header';
 
 
 const HamburgerNav = (props) => {
+
   return (
     <>
 
-    <script>
-      
-    </script>
-
     {/* HAMBURGER MENU START */}
-    <div className= {`${props.toggleClassCheck}`} >
+    <div className= {`${props.toggleClassCheck}`}>
         <div className='pt-5'>
               <div className="hamburger-text">
                 <a href="" id="login2">HOME </a>
