@@ -10,9 +10,9 @@ const formatThousand = num => {
        /\d(?=(?:\d{3})+(?:\.|$))/g,
        (m, i) => p < 0 || i < p ? `${m}.` : m
    )
-}
+};
 
-;
+
 
 const AllProducts = () => {
   return (

@@ -1,13 +1,12 @@
 import React from "react";
 import * as Icon from "react-feather";
 
+const countRating = (x) =>{
+  for (i=0; i<x; i++ ){
+    return "X";
+  }
+}
 
-// const countRating = (x) =>{
-//   for (i=0; i<x; i++ ){
-//     <Icon.Star/>
-//   }
-
-// }
 
 const AllProductsList = ({
   link,
@@ -43,13 +42,13 @@ const AllProductsList = ({
           <del className="text-red-500">{discountPrice}</del> {price}
         </h2>
         <p className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-sm ">
-          {/* countRating({rating}) */}
-          {rating.map((star) => (
+        
+          {/* {rating.map((star) => (
             <span className="inline-block px-2 py-1 font-semibold border-2 border-stone-900 rounded-md">
               {star}
             
             </span>
-          ))}
+          ))} */}
         </p>
       </div>
     </a>

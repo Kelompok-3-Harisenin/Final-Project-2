@@ -5,7 +5,7 @@ export default [
   {
     title: "Terminal Website",
     imgUrl: "/assets/Products/jaket1.jpg",
-    rating: ["⭐", "⭐", "⭐"],
+    rating: 5,
     link: "https://fkcodes.com",
     discountPrice: 150000,
     price: 500000,
