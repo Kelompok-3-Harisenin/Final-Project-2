@@ -1,8 +1,6 @@
 import * as Icon from "react-feather";
 import React from "react";
 
-
-
 export default [
   {
     title: "Terminal Website",

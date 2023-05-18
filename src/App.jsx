@@ -6,6 +6,11 @@ import Login from './components/Login'
 import Header from './components/Header'
 import HamburgerNav from './components/HamburgerNav'
 import AllProducts from './components/AllProducts'
+import Jacket from './components/Jacket'
+import TShirt from './components/TShirt'
+import Shirt from './components/Shirt'
+import NewArrivals from './components/NewArrivals'
+import Accessories from './components/Accessories'
 
 
 
@@ -18,6 +23,11 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage/>}></Route>
           <Route path='/all-products' element={<AllProducts/>}></Route>
+          <Route path='/jacket' element={<Jacket/>}></Route>
+          <Route path='/t-shirt' element={<TShirt/>}></Route>
+          <Route path='/shirt' element={<Shirt/>}></Route>
+          <Route path='/new-arrivals' element={<NewArrivals/>}></Route>
+          <Route path='/accessories' element={<Accessories/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
         </Routes>
       </Router>

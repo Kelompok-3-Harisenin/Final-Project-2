@@ -20,8 +20,6 @@ const Header = () => {
   onClick={() => setNavbarState(!navbarState)}/>
 </button>
 
-       
-
           <button href="" className="logo mb-2 ">
             <img
               className="max-h-14 max-w-[240px] sm:left-12 ml-12 "
