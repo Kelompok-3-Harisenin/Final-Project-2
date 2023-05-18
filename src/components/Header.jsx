@@ -9,6 +9,7 @@ const Header = () => {
 
 let menuRef = useRef();
 
+
 useEffect(() => {
   let handler = (e)=>{
     if(!menuRef.current.contains(e.target)){
@@ -17,6 +18,7 @@ useEffect(() => {
   };
   document.addEventListener("mousedown", handler)
 })
+
 
 
   return (
