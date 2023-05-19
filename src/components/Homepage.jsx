@@ -1,21 +1,29 @@
-import React from 'react'
-import Header from './Header'
+import Header from "./Header";
+import HamburgerNav from "./HamburgerNav";
+import MainText from "./Main";
+import { Grid } from "./Main";
+import { useNavigate } from "react-router-dom";
 
 const Homepage = () => {
+  const navigate = useNavigate();
   return (
     <>
-      <body>
-        <div className="hero-img min-h-screen bg-cover bg-no-repeat bg-center">
-          <Header />
-          <div className="hero-content w-full h-screen flex justify-center">
-            <a href="" className="button my-auto text-white border bg-[#1f2021] py-3 px-5 font-medium">
-              SHOP NOW
-            </a>
-          </div>
+      <div className="hero-img min-h-screen bg-cover bg-no-repeat bg-center">
+        <Header />
+        <div className="h-screen flex justify-center">
+          <button
+            onClick={() => navigate("/all-products")}
+            href=""
+            className="button my-auto text-white border bg-[#1f2021] py-3 px-5 font-medium hover:bg-white hover:text-black hover:opacity-90 transition ease-in-out duration-[400ms] hover:scale-110"
+          >
+            SHOP NOW
+          </button>
         </div>
-      </body>
+      </div>
+      <MainText />
+      <Grid />
     </>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;
