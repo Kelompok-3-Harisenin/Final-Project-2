@@ -24,7 +24,7 @@ const Homepage = () => {
           <div className='carousel-image image3'></div>
         </div>
       </Carousel>
-    <div className='hero-img w-full'>
+    <div className='hero-img  min-h-screen bg-cover bg-no-repeat bg-center'>
       <div className="header-wrapper bg-transparent pt-5">
         <div className="header-nav">
           <div className="container mx-auto flex justify-between items-center">
