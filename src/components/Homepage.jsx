@@ -1,37 +1,58 @@
-import React from 'react'
+import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import '../styles/index.css';
+
 
 const Homepage = () => {
   return (
-    <>
-<body>
-<div class="hero-img min-h-screen bg-cover bg-no-repeat bg-center">
-      <div class="header-wrapper bg-transparent pt-5">
-        <div class="header-nav">
-          <div class="container mx-auto flex justify-between items-center">
+   
+<header className="header">
+      <Carousel 
+      autoPlay 
+      infiniteLoop 
+      showThumbs={false} 
+      showStatus={false}
+      >
+        <div>
+          <div className='carousel-image image1'></div>
+        </div>
+        <div>
+          <div className='carousel-image image2'></div>
+        </div>
+        <div>
+          <div className='carousel-image image3'></div>
+        </div>
+      </Carousel>
+    <div className='hero-img w-full'>
+      <div className="header-wrapper bg-transparent pt-5">
+        <div className="header-nav">
+          <div className="container mx-auto flex justify-between items-center">
             <a
               href=""
-              class="burger text-slate-900 relative w-[30px] h-[30px] bottom-[10px]"
+              className="burger text-slate-900 relative w-[30px] h-[30px] bottom-[10px]"
             >
               <div
-                class="burger-icon absolute block h-[2px] top-[17px] bg-white w-5 left-1"
+                className="burger-icon absolute block h-[2px] top-[17px] bg-white w-5 left-1"
               ></div>
               <div
-                class="burger-icon absolute block h-[2px] top-[24px] bg-white w-5 left-1"
+                className="burger-icon absolute block h-[2px] top-[24px] bg-white w-5 left-1"
               ></div>
               <div
-                class="burger-icon absolute block h-[2px] top-[31px] bg-white w-5 left-1"
+                className="burger-icon absolute block h-[2px] top-[31px] bg-white w-5 left-1"
               ></div>
+              
             </a>
 
-            <a href="" class="logo">
+            <a href="" className="logo">
               <img
-                class="max-h-14 max-w-[240px] sm:pl-12 pl-12"
+                className="max-h-14 max-w-[240px] sm:pl-12 pl-12"
                 src="/assets/Homepage/hero-logo.png"
                 alt=""
               />
             </a>
-            <div class="site-nav flex text-white gap-2">
-              <a class="w-7 h-7" href=""
+            <div className="site-nav flex text-white gap-2">
+              <a className="w-7 h-7" href=""
                 ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path
                     fill="currentColor"
@@ -39,7 +60,7 @@ const Homepage = () => {
                   />
                 </svg>
               </a>
-              <a class="w-7 h-7" href=""
+              <a className="w-7 h-7" href=""
                 ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                   <path
                     fill="currentColor"
@@ -47,7 +68,7 @@ const Homepage = () => {
                   />
                 </svg>
               </a>
-              <a class="w-7 h-7" href=""
+              <a className="w-7 h-7" href=""
                 ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                   <path
                     fill="currentColor"
@@ -59,19 +80,17 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <div class="hero-content w-full h-screen flex justify-center">
+      <div className="hero-content w-full h-screen flex justify-center">
         <a
           href=""
-          class="button my-auto text-white border bg-[#1f2021] py-3 px-5 font-medium"
+          className="button my-auto text-white border bg-[#1f2021] py-3 px-5 font-medium"
         >
           SHOP NOW
         </a>
       </div>
-    </div>
+      </div>
+    </header>
 
-
-</body>
-    </>
     )
 }
 

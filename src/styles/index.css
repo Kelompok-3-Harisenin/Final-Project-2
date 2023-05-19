@@ -18,3 +18,74 @@
     background-image: url("assets/Homepage/Hero.jpg");
   }
 }
+
+/* Ubah ukuran carousel */
+.carousel .slide img {
+  max-height: 400px;
+}
+
+/* Gaya caption */
+.carousel .legend {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+}
+
+.carousel {
+  overflow: hidden;
+}
+
+.carousel .slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel .slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.carousel .slide.active {
+  opacity: 1;
+}
+
+.carousel .slide.enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.carousel .slide.leave {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+
+  .header {
+  position: relative;
+}
+
+.carousel .slide {
+  position: static !important;
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.image1 {
+  background-image: url("assets/Carousel/img-carousel1.jpeg");
+}
+
+.image2 {
+  background-image: url("assets/Homepage/carouselimg1.webp");
+}
+
+.image3 {
+  background-image: url("assets/Homepage/carouselimg2.webp");
+}
