@@ -74,7 +74,7 @@ const Header = () => {
           <div className="flex text-white gap-2 ">
             <button
               onClick={() => navigate("/")}
-              className=" h-7 hidden md:block text-xl px-3 hover:text-[#232324]"
+              className=" h-7 hidden md:block text-xl px-3 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]"
               href=""
             >
               HOME
@@ -83,7 +83,7 @@ const Header = () => {
             <div className="dropdown w-32 hidden md:flex">
               <button
                 onClick={() => setDropDownState(!dropDownState)}
-                className="nav-link h-7 text-xl pl-7 w-full flex"
+                className="nav-link h-7 text-xl pl-7 w-full flex hover:scale-110 transition ease-in-out duration-[350ms]"
                 href=""
               >
                 SHOP{" "}
@@ -93,7 +93,7 @@ const Header = () => {
               </button>
               <div className={`${toggleDropDown} text-lg`} ref={dropDownRef}>
                 <button
-                  className="block hover:text-gray-600"
+                  className="block hover:text-gray-600 "
                   onClick={() => navigate("/new-arrivals")}
                 >
                   {" "}
@@ -144,7 +144,7 @@ const Header = () => {
             <div className="dropdown">
               <button
                 onClick={() => setDropDownState2(!dropDownState2)}
-                className="nav-link h-7 hidden md:flex text-xl "
+                className="nav-link h-7 hidden md:flex text-xl hover:scale-110 transition ease-in-out duration-[350ms]"
                 href=""
               >
                 GOOD VIBRATIONS{" "}
@@ -164,13 +164,16 @@ const Header = () => {
             </div>
 
             <a
-              className=" h-7 hidden md:block text-xl px-3 hover:text-[#232324]"
+              className=" h-7 hidden md:block text-xl px-3 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]"
               href=""
             >
               MAGAZINE
             </a>
 
-            <button className="w-7 h-7 hover:text-[#232324]" href="">
+            <button
+              className="w-7 h-7 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]"
+              href=""
+            >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
                   fill="currentColor"
@@ -179,7 +182,10 @@ const Header = () => {
               </svg>
             </button>
 
-            <button className="w-7 h-7 hover:text-[#232324]" href="">
+            <button
+              className="w-7 h-7 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]"
+              href=""
+            >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
                   fill="currentColor"
@@ -187,7 +193,10 @@ const Header = () => {
                 />
               </svg>
             </button>
-            <button className="w-7 h-7 hover:text-[#232324]" href="">
+            <button
+              className="w-7 h-7 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]"
+              href=""
+            >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                 <path
                   fill="currentColor"
