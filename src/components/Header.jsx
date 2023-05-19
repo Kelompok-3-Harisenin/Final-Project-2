@@ -1,52 +1,49 @@
-
-import React, { useEffect, useState, useRef } from "react";
-import HamburgerNav from "./HamburgerNav";
-import * as Icon from "react-feather";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState, useRef } from 'react'
+import HamburgerNav from './HamburgerNav'
+import * as Icon from 'react-feather'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
-  const [navbarState, setNavbarState] = useState(false);
-  let toggleClassCheck = navbarState ? "hamburger-nav active" : "hamburger-nav";
+  const [navbarState, setNavbarState] = useState(false)
+  let toggleClassCheck = navbarState ? 'hamburger-nav active' : 'hamburger-nav'
 
-  let menuRef = useRef();
+  let menuRef = useRef()
 
   useEffect(() => {
     let handler = (e) => {
       if (!menuRef.current.contains(e.target)) {
-        setNavbarState(false);
+        setNavbarState(false)
       }
-    };
-    document.addEventListener("mousedown", handler);
-  });
+    }
+    document.addEventListener('mousedown', handler)
+  })
 
-  const [dropDownState, setDropDownState] = useState(false);
-  let toggleDropDown = dropDownState ? "dropdown-menu active" : "dropdown-menu";
-  let dropDownRef = useRef();
+  const [dropDownState, setDropDownState] = useState(false)
+  let toggleDropDown = dropDownState ? 'dropdown-menu active' : 'dropdown-menu'
+  let dropDownRef = useRef()
 
   useEffect(() => {
     let handler = (e) => {
       if (!dropDownRef.current.contains(e.target)) {
-        setDropDownState(false);
+        setDropDownState(false)
       }
-    };
-    document.addEventListener("mousedown", handler);
-  });
-  const [dropDownState2, setDropDownState2] = useState(false);
-  let toggleDropDown2 = dropDownState2
-    ? "dropdown-menu2 active"
-    : "dropdown-menu2";
-  let dropDownRef2 = useRef();
+    }
+    document.addEventListener('mousedown', handler)
+  })
+  const [dropDownState2, setDropDownState2] = useState(false)
+  let toggleDropDown2 = dropDownState2 ? 'dropdown-menu2 active' : 'dropdown-menu2'
+  let dropDownRef2 = useRef()
 
   useEffect(() => {
     let handler = (e) => {
       if (!dropDownRef2.current.contains(e.target)) {
-        setDropDownState2(false);
+        setDropDownState2(false)
       }
-    };
-    document.addEventListener("mousedown", handler);
-  });
+    }
+    document.addEventListener('mousedown', handler)
+  })
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   return (
     <>
@@ -56,137 +53,83 @@ const Header = () => {
       <div className=" pt-5 absolute w-full z-20">
         <div className=" container mx-auto flex justify-between items-center sm:px-0 px-10">
           <button>
-            <Icon.Menu
-              href=""
-              className="flex text-white md:hidden relative w-[30px] h-[30px] hover:text-[#232324]"
-              id="hamburger-menu"
-              onClick={() => setNavbarState(!navbarState)}
-            />
+            <Icon.Menu href="" className="flex text-white md:hidden relative w-[30px] h-[30px] hover:text-[#232324]" id="hamburger-menu" onClick={() => setNavbarState(!navbarState)} />
           </button>
 
-          <button href="" className="logo mb-2 " onClick={() => navigate("/")}>
-            <img
-              className="max-h-14 max-w-[240px] sm:left-12 ml-12 sm:ml-0"
-              src="/assets/Homepage/hero-logo.png"
-              alt=""
-            />
+          <button href="" className="logo mb-2 " onClick={() => navigate('/')}>
+            <img className="max-h-14 max-w-[240px] sm:left-12 ml-12 sm:ml-0" src="/assets/Homepage/hero-logo.png" alt="" />
           </button>
 
           <div className="flex text-white gap-2 ">
-            <button
-              onClick={() => navigate("/")}
-              className=" h-7 hidden md:block text-xl px-3 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]"
-              href=""
-            >
+            <button onClick={() => navigate('/')} className=" h-7 hidden md:block text-xl px-3 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]" href="">
               HOME
             </button>
 
             <div className="dropdown w-32 hidden md:flex">
-              <button
-                onClick={() => setDropDownState(!dropDownState)}
-                className="nav-link h-7 text-xl pl-7 w-full flex hover:scale-110 transition ease-in-out duration-[350ms]"
-                href=""
-              >
-                SHOP{" "}
+              <button onClick={() => setDropDownState(!dropDownState)} className="nav-link h-7 text-xl pl-7 w-full flex hover:scale-110 transition ease-in-out duration-[350ms]" href="">
+                SHOP{' '}
                 <div className="mt-2 ml-2">
                   <Icon.ArrowDown size={12} />
                 </div>
               </button>
               <div className={`${toggleDropDown} text-lg`} ref={dropDownRef}>
-                <button
-                  className="block hover:text-gray-600 "
-                  onClick={() => navigate("/new-arrivals")}
-                >
-                  {" "}
+                <button className="block hover:text-gray-600 " onClick={() => navigate('/new-arrivals')}>
+                  {' '}
                   New Arrivals
                 </button>
-                <button
-                  className="block hover:text-gray-600"
-                  onClick={() => navigate("/t-shirt")}
-                >
-                  {" "}
+                <button className="block hover:text-gray-600" onClick={() => navigate('/t-shirt')}>
+                  {' '}
                   T-Shirt
                 </button>
-                <button
-                  className="block hover:text-gray-600"
-                  onClick={() => navigate("/shirt")}
-                >
-                  {" "}
+                <button className="block hover:text-gray-600" onClick={() => navigate('/shirt')}>
+                  {' '}
                   Shirt
                 </button>
                 {/* <button className="block hover:text-gray-600"> Sweater</button>  */}
                 {/* <button className="block hover:text-gray-600"> Polo Shirt</button>  */}
-                <button
-                  className="block hover:text-gray-600"
-                  onClick={() => navigate("/jacket")}
-                >
-                  {" "}
+                <button className="block hover:text-gray-600" onClick={() => navigate('/jacket')}>
+                  {' '}
                   Jacket
                 </button>
                 {/* <button className="block hover:text-gray-600"> Pants</button>  */}
                 {/* <button className="block hover:text-gray-600"> Blue Series</button>  */}
-                <button
-                  className="block hover:text-gray-600"
-                  onClick={() => navigate("/accessories")}
-                >
-                  {" "}
+                <button className="block hover:text-gray-600" onClick={() => navigate('/accessories')}>
+                  {' '}
                   Accessories
                 </button>
-                <button
-                  className="block hover:text-gray-600"
-                  onClick={() => navigate("/all-products")}
-                >
-                  {" "}
+                <button className="block hover:text-gray-600" onClick={() => navigate('/all-products')}>
+                  {' '}
                   All Product
                 </button>
               </div>
             </div>
 
             <div className="dropdown">
-              <button
-                onClick={() => setDropDownState2(!dropDownState2)}
-                className="nav-link h-7 hidden md:flex text-xl hover:scale-110 transition ease-in-out duration-[350ms]"
-                href=""
-              >
-                GOOD VIBRATIONS{" "}
+              <button onClick={() => setDropDownState2(!dropDownState2)} className="nav-link h-7 hidden md:flex text-xl hover:scale-110 transition ease-in-out duration-[350ms]" href="">
+                GOOD VIBRATIONS{' '}
                 <div className="mt-2 ml-2">
                   <Icon.ArrowDown size={12} />
                 </div>
               </button>
               <div className={`${toggleDropDown2}`} ref={dropDownRef2}>
-                <button
-                  className="hover:text-gray-600 "
-                  onClick={() => navigate("/new-arrivals")}
-                >
-                  {" "}
+                <button className="hover:text-gray-600 " onClick={() => navigate('/new-arrivals')}>
+                  {' '}
                   Good Vibrations Vol 3
                 </button>
               </div>
             </div>
 
-            <a
-              className=" h-7 hidden md:block text-xl px-3 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]"
-              href=""
-            >
+            <a className=" h-7 hidden md:block text-xl px-3 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]" href="Magazine.jsx">
               MAGAZINE
             </a>
 
-            <button
-              className="w-7 h-7 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]"
-              href=""
-            >
+            <button className="w-7 h-7 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]" href="">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                  fill="currentColor"
-                  d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-                />
+                <path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
               </svg>
             </button>
 
-            <button
-              className="w-7 h-7 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]"
-              href=""
-            >
+            <button className="w-7 h-7 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]" href="">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
                   fill="currentColor"
@@ -194,10 +137,7 @@ const Header = () => {
                 />
               </svg>
             </button>
-            <button
-              className="w-7 h-7 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]"
-              href=""
-            >
+            <button className="w-7 h-7 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]" href="">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                 <path
                   fill="currentColor"
@@ -209,9 +149,7 @@ const Header = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-
-export default Header;
-
+export default Header
