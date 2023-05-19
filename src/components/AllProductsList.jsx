@@ -15,9 +15,9 @@ const AllProductsList = ({
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className=" text-[#232324] rounded-md overflow-hidden font-sans mx-3 max-w-[277px] "
+      className="hover-item text-[#232324] rounded-md overflow-hidden font-sans mx-3 max-w-[277px] "
     >
-      <div className="text-red-900 font-semibold border-2 border-red-900 rounded-3xl relative w-2/6 flex items-center">
+      <div className="hover-price text-red-900 font-semibold border-2 border-red-900 rounded-3xl relative w-2/6 flex items-center">
         <div className="text-center"> Save {discountPercent}%OFF</div>
       </div>
       <img

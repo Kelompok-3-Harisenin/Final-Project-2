@@ -14,7 +14,7 @@ const Homepage = () => {
           <button
             onClick={() => navigate("/all-products")}
             href=""
-            className="button my-auto text-white border bg-[#1f2021] py-3 px-5 font-medium hover:text-gray-400 hover:opacity-90"
+            className="button my-auto text-white border bg-[#1f2021] py-3 px-5 font-medium hover:bg-white hover:text-black hover:opacity-90 transition ease-in-out duration-[400ms] hover:scale-110"
           >
             SHOP NOW
           </button>
