@@ -1,12 +1,10 @@
 
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Homepage from './components/Homepage'
 import Footer from './components/Footer'
 import Login from './components/Login'
 import Carousel from './components/Carousel'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import "@fortawesome/fontawesome-free/css/all.css";
-
-
 import AllProducts from './components/AllProducts'
 import Jacket from './components/Jacket'
 import TShirt from './components/TShirt'
@@ -18,11 +16,13 @@ import Contact from './components/Contact'
 
 function App() {
   
+
   return (
     <>
 
       <Router>
         <Routes>
+
           <Route path='/' element={<Homepage/>}></Route>
          
           <Route path='/all-products' element={<AllProducts/>}></Route>
