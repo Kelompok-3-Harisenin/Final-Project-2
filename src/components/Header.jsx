@@ -119,7 +119,7 @@ const Header = () => {
               </div>
             </div>
 
-            <a className=" h-7 hidden md:block text-xl px-3 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]" href="Magazine.jsx">
+            <a className=" h-7 hidden md:block text-xl px-3 hover:text-[#232324] hover:scale-110 transition ease-in-out duration-[350ms]" href='#'  onClick={() => navigate('/Magazine')}>
               MAGAZINE
             </a>
 

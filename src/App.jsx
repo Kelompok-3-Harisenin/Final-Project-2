@@ -13,6 +13,7 @@ import Accessories from './components/Accessories'
 import WrongPage from './components/WrongPage'
 import Contact from './components/Contact'
 import SecondContent from './components/SecondContent'
+import Magazine from './components/Magazine'
 
 function App() {
   return (
@@ -20,7 +21,6 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Homepage />}></Route>
-
           <Route path="/all-products" element={<AllProducts />}></Route>
           <Route path="/jacket" element={<Jacket />}></Route>
           <Route path="/t-shirt" element={<TShirt />}></Route>
@@ -30,11 +30,9 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/*" element={<WrongPage />}></Route>
+          <Route path="/Magazine" element={<Magazine/>}></Route>
         </Routes>
       </Router>
-      <SecondContent />
-      <Carousel />
-      <Footer />
     </>
   )
 }

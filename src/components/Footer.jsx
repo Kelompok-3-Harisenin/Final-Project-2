@@ -28,7 +28,7 @@ function Footer() {
         <p><a className='fab fa-youtube hover:text-gray-700 text-xs' href="#">  Youtube</a></p>
       </div>
       <div className='py-4 max-md:mr-0 mr-4'>
-        <p>&copy;2023, <a class="hover:text-gray-700" href="#">Screamous / Daily Wear</a></p>
+        <p>&copy;2023, <a className="hover:text-gray-700" href="#">Screamous / Daily Wear</a></p>
         <img src="assets/Homepage/Screamous.jpg" alt="logo screamous" className='w-20 h-20 max-md:ml-12 ml-36 mt-2'/>
           <img src="assets/Homepage/channel pembayaran.PNG" alt="channel pembayaran" className='max-md:-ml-5'/>
           </div>

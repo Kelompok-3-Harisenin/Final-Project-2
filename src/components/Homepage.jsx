@@ -3,6 +3,10 @@ import HamburgerNav from "./HamburgerNav";
 import MainText from "./Main";
 import { Grid } from "./Main";
 import { useNavigate } from "react-router-dom";
+import SecondContent from "./SecondContent";
+import Carousel from "./Carousel";
+import Footer from "./Footer";
+
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -22,6 +26,10 @@ const Homepage = () => {
       </div>
       <MainText />
       <Grid />
+    <SecondContent/>
+    <Carousel/>
+    <Footer/>
+
     </>
   );
 };
