@@ -33,6 +33,8 @@ function App() {
           <Route path="/Magazine" element={<Magazine/>}></Route>
         </Routes>
       </Router>
+      <Carousel/>
+    <Footer/>
     </>
   )
 }

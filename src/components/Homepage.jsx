@@ -7,7 +7,6 @@ import SecondContent from "./SecondContent";
 import Carousel from "./Carousel";
 import Footer from "./Footer";
 
-
 const Homepage = () => {
   const navigate = useNavigate();
   return (
@@ -26,10 +25,7 @@ const Homepage = () => {
       </div>
       <MainText />
       <Grid />
-    <SecondContent/>
-    <Carousel/>
-    <Footer/>
-
+      <SecondContent />
     </>
   );
 };
