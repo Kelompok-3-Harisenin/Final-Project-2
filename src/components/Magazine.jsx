@@ -1,13 +1,18 @@
 import Header from './Header'
+import { useNavigate } from 'react-router-dom'
+import Footer from './Footer'
 
 function Magazine() {
   return (
     <div>
-      <Header />
+      
       {/* Start HOW TO TAKE CARE OF YOUR CLOTHES */}
-      <div id="container1">
-        <h1 className="text-xl text-center font-bold">News</h1>
+      <div id="container1" >
+      <div className='bg-slate-400 h-[67px]'><Header/></div>
+        <div className='my-9'>
+        <h1 className="text-xl text-center font-bold ">News</h1>
         <hr className="border-[1px] border-black w-14 mx-auto my-4" />
+        </div>
       </div>
       <div className="mx-5 ">
         <img src="https://www.screamous.com/cdn/shop/articles/tees_2052x.jpg?v=1617250928" alt="How Take Care Your Cloth " className="w-[46rem]  mx-auto" />
@@ -251,6 +256,7 @@ function Magazine() {
 
       <hr className="border-[1px] border-black w-14  my-4 mx-auto" />
       {/* Akhir Next Page */}
+      <Footer/>
     </div>
   )
 }
