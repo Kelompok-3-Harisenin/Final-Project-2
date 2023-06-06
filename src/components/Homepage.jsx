@@ -4,11 +4,11 @@ import MainText from "./Main";
 import { Grid } from "./Main";
 import { useNavigate } from "react-router-dom";
 import SecondContent from "./SecondContent";
-import Carousel from "./Carousel";
-import Footer from "./Footer";
+
 
 const Homepage = () => {
   const navigate = useNavigate();
+  
   return (
     <>
       <div className="hero-img min-h-screen bg-cover bg-no-repeat bg-center">
