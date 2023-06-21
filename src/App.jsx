@@ -14,6 +14,7 @@ import WrongPage from './components/WrongPage'
 import Contact from './components/Contact'
 import SecondContent from './components/SecondContent'
 import Magazine from './components/Magazine'
+import Atest from './components/Atest'
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/*" element={<WrongPage />}></Route>
           <Route path="/Magazine" element={<Magazine/>}></Route>
+          <Route path="/Atest" element={<Atest/>}></Route>
+          
         </Routes>
       </Router>
       <Carousel/>
