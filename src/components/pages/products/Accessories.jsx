@@ -1,7 +1,7 @@
 import React from "react";
-import AllProductsList from "./AllProductsList";
-import accessories from "../data/accessories";
-import Header from "./Header";
+import AllProductsList from "../AllProductsList";
+import accessories from "../../../data/accessories";
+import Header from "../../Header";
 
 const formatThousand = (num) => {
   const n = String(num),

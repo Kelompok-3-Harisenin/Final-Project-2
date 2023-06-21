@@ -1,7 +1,7 @@
 import React from "react";
-import AllProductsList from "./AllProductsList";
-import jacket from "../data/jacket";
-import Header from "./Header";
+import AllProductsList from "../AllProductsList";
+import shirt from "../../../data/shirt";
+import Header from "../../Header";
 
 const formatThousand = (num) => {
   const n = String(num),
@@ -11,7 +11,7 @@ const formatThousand = (num) => {
   );
 };
 
-const Jacket = () => {
+const Shirt = () => {
   return (
     <>
       <div className="bg-slate-400 h-[67px]">
@@ -21,7 +21,7 @@ const Jacket = () => {
       <div className="py-10">
         <div className="flex flex-col md:flex-row items-center justify-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {jacket.map((item) => (
+            {shirt.map((item) => (
               <AllProductsList
                 discountPercent={item.discountPercent}
                 imgUrl={item.imgUrl}
@@ -39,4 +39,4 @@ const Jacket = () => {
   );
 };
 
-export default Jacket;
+export default Shirt;
