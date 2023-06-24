@@ -85,14 +85,14 @@ const Header = () => {
                   {' '}
                   Shirt
                 </button>
-                {/* <button className="block hover:text-gray-600"> Sweater</button>  */}
-                {/* <button className="block hover:text-gray-600"> Polo Shirt</button>  */}
-                <button className="block hover:text-gray-600" onClick={() => navigate('/jacket')}>
+                <button className="block hover:text-gray-600" onClick={() => navigate('/sweater')}>
                   {' '}
-                  Jacket
+                  Sweater
                 </button>
-                {/* <button className="block hover:text-gray-600"> Pants</button>  */}
-                {/* <button className="block hover:text-gray-600"> Blue Series</button>  */}
+                <button className="block hover:text-gray-600" onClick={() => navigate('/pants')}>
+                  {' '}
+                  Pants
+                </button>
                 <button className="block hover:text-gray-600" onClick={() => navigate('/accessories')}>
                   {' '}
                   Accessories
