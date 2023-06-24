@@ -38,7 +38,7 @@ function App() {
           <Route path="/products/:id" element={<ProductDetail />}></Route>
         </Routes>
       </Router>
-<BackToTopButton />
+      <BackToTopButton />
       <Carousel />
       <Footer />
     </>
