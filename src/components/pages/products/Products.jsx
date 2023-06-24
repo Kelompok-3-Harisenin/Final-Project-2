@@ -41,7 +41,7 @@ const Products = ({ endpoint }) => {
 
   return (
     <>
-      <div className="bg-slate-400 h-[67px]">
+      <div className="bg-slate-400 h-[57px]">
         <Header />
       </div>
 
@@ -50,13 +50,14 @@ const Products = ({ endpoint }) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.map((item) => (
               <AllProductsList
+                key={item.id}
                 discountPercent={item.discount}
                 imgUrl={item.thumbnailPreview}
                 title={item.detailName}
                 rating={item.rating}
                 discountPrice={item.initialPrice}
                 price={formatThousand(calculateDiscountedPrice(item.initialPrice, item.discount))}
-                link={item.link}
+                link={`/products/${item.id}`} // Updated link value
               >
                 {renderStarIcons(item.rating)}
               </AllProductsList>

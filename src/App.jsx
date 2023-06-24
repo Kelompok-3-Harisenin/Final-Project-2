@@ -13,6 +13,8 @@ import Accessories from "./components/pages/products/Accessories";
 import WrongPage from "./components/pages/WrongPage";
 import Contact from "./components/pages/Contact";
 import Magazine from "./components/pages/Magazine";
+import BackToTopButton from "./components/BackToTopButton";
+import ProductDetail from "./components/pages/products/DetailProducts";
 
 import Pants from "./components/pages/products/Pants";
 
@@ -33,8 +35,10 @@ function App() {
           <Route path="/*" element={<WrongPage />}></Route>
           <Route path="/Magazine" element={<Magazine />}></Route>
           <Route path="/pants" element={<Pants />}></Route>
+          <Route path="/products/:id" element={<ProductDetail />}></Route>
         </Routes>
       </Router>
+<BackToTopButton />
       <Carousel />
       <Footer />
     </>
