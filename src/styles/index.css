@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer components {
   .grid-container {
     background-color: transparent;
@@ -118,20 +122,19 @@
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
-
 }
 
-.hover-price{
-  background: linear-gradient(to left, transparent 50%, rgb(148,163,184)50%) right;
+.hover-price {
+  background: linear-gradient(to left, transparent 50%, rgb(148, 163, 184) 50%)
+    right;
   background-size: 200%;
-  transition: .5s ease-out;
+  transition: 0.5s ease-out;
 }
 
-.hover-item:hover .hover-price{
+.hover-item:hover .hover-price {
   background-position: left;
   color: white;
   border-color: black;
-  
 }
 .carousel .slide img {
   max-height: 400px;
@@ -153,11 +156,6 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.carousel .slide {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
 .carousel .slide.active {
   opacity: 1;
 }
@@ -172,8 +170,10 @@
   transform: translateX(-100%);
 }
 
-
-  .header {
+.slide-image {
+  min-height: 100vh;
+}
+.header {
   position: relative;
 }
 

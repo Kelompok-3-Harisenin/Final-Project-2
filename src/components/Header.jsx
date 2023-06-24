@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import HamburgerNav from './HamburgerNav'
 import * as Icon from 'react-feather'
 import { useNavigate } from 'react-router-dom'
@@ -50,7 +50,7 @@ const Header = () => {
       <div ref={menuRef}>
         <HamburgerNav toggleClassCheck={toggleClassCheck} />
       </div>
-      <div className=" pt-5 absolute w-full z-20">
+      <div className=" pt-2 absolute w-full z-20">
         <div className=" container mx-auto flex justify-between items-center sm:px-0 px-10">
           <button>
             <Icon.Menu href="" className="flex text-white md:hidden relative w-[30px] h-[30px] hover:text-[#232324]" id="hamburger-menu" onClick={() => setNavbarState(!navbarState)} />
@@ -85,14 +85,14 @@ const Header = () => {
                   {' '}
                   Shirt
                 </button>
-                {/* <button className="block hover:text-gray-600"> Sweater</button>  */}
-                {/* <button className="block hover:text-gray-600"> Polo Shirt</button>  */}
-                <button className="block hover:text-gray-600" onClick={() => navigate('/jacket')}>
+                <button className="block hover:text-gray-600" onClick={() => navigate('/sweater')}>
                   {' '}
-                  Jacket
+                  Sweater
                 </button>
-                {/* <button className="block hover:text-gray-600"> Pants</button>  */}
-                {/* <button className="block hover:text-gray-600"> Blue Series</button>  */}
+                <button className="block hover:text-gray-600" onClick={() => navigate('/pants')}>
+                  {' '}
+                  Pants
+                </button>
                 <button className="block hover:text-gray-600" onClick={() => navigate('/accessories')}>
                   {' '}
                   Accessories
