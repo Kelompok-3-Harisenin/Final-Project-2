@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Header from '../../Header';
 import AllProductsList from '../AllProductsList';
+import CarouselComponent from '../../Carousel';
 
 const Products = ({ endpoint }) => {
   const [data, setData] = useState([]);
@@ -65,6 +66,7 @@ const Products = ({ endpoint }) => {
           </div>
         </div>
       </div>
+      <CarouselComponent/>
     </>
   );
 };

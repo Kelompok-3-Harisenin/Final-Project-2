@@ -4,6 +4,8 @@ import MainText from "../Main";
 import { Grid } from "../Main";
 import { useNavigate } from "react-router-dom";
 import SecondContent from "./SecondContent";
+import CarouselComponent from "../Carousel";
+
 
 
 const Homepage = () => {
@@ -26,6 +28,8 @@ const Homepage = () => {
       <MainText />
       <Grid />
       <SecondContent />
+      <CarouselComponent/>
+      
     </>
   );
 };

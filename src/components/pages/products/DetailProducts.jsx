@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Header from '../../Header';
+
 
 const ProductDetail = () => {
   const [product, setProduct] = useState(null);
   const [count, setCount] = useState(1);
-
+  const [selectedSize, setSelectedSize] = useState(''); // Added state for selected size
   const { id } = useParams();
 
   useEffect(() => {
@@ -41,28 +43,35 @@ const ProductDetail = () => {
     console.log('Buy now clicked!');
   };
 
+  const handleSizeSelection = (size) => {
+    setSelectedSize(size);
+  };
+
   if (!product) {
     return <div>Loading...</div>;
   }
 
   return (
-    
+    <>
+    <div className="bg-slate-400 h-[57px]">
+      <Header />
+    </div>
     <div className="flex flex-wrap">
       <div className="w-full md:w-1/2 p-4">
         {/* Main Product Image */}
-        <img src={product.thumbnailPreview} alt="Main Product" className="w-full" />
+        <img src={product.thumbnailPreview} alt="Main Product" className="w-72 mx-auto" />
 
         {/* Sub Product Images */}
-        <div className="flex mt-4">
-          <img src={product.thumbnailUrl1} alt="Sub Product 1" className="w-1/3 mr-2" />
-          <img src={product.thumbnailUrl2} alt="Sub Product 2" className="w-1/3 mr-2" />
-          <img src={product.thumbnailUrl3} alt="Sub Product 3" className="w-1/3" />
+        <div className="flex mt-4 gap-3 justify-center">
+          <img src={product.thumbnailUrl1} alt="Sub Product 1" className="w-1/5 h-1/5" />
+          <img src={product.thumbnailUrl2} alt="Sub Product 2" className="w-1/5 h-1/5" />
+          <img src={product.thumbnailUrl3} alt="Sub Product 3" className="w-1/5 h-1/5" />
         </div>
       </div>
 
-      <div className="w-full md:w-1/2 p-4">
+      <div className="w-full md:w-1/2 p-4 sm:mt-14">
         {/* Product Name */}
-        <h2 className="text-2xl font-bold mb-2">{product.detailName}</h2>
+        <h2 className="text-3xl font-bold mb-2">{product.detailName}</h2>
 
         {/* Product Price */}
         <p className="text-lg font-bold mb-2">Price: ${product.initialPrice}</p>
@@ -87,6 +96,31 @@ const ProductDetail = () => {
           </button>
         </div>
 
+        {/* Size Selection */}
+        <div className="mb-4">
+          <p className="text-lg font-bold mb-2">Size:</p>
+          <div className="flex items-center">
+            <button
+              className={`bg-gray-200 text-gray-700 px-4 py-2 rounded-full mr-2 ${selectedSize === 'S' && 'bg-blue-500 text-white'}`}
+              onClick={() => handleSizeSelection('S')}
+            >
+              S
+            </button>
+            <button
+              className={`bg-gray-200 text-gray-700 px-4 py-2 rounded-full mr-2 ${selectedSize === 'M' && 'bg-blue-500 text-white'}`}
+              onClick={() => handleSizeSelection('M')}
+            >
+              M
+            </button>
+            <button
+              className={`bg-gray-200 text-gray-700 px-4 py-2 rounded-full mr-2 ${selectedSize === 'L' && 'bg-blue-500 text-white'}`}
+              onClick={() => handleSizeSelection('L')}
+            >
+              L
+            </button>
+          </div>
+        </div>
+
         {/* Buy Button */}
         <button
           className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full mr-2"
@@ -109,6 +143,7 @@ const ProductDetail = () => {
         </button>
       </div>
     </div>
+    </>
   );
 };
 

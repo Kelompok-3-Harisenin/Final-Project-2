@@ -1,7 +1,6 @@
 import Homepage from "./components/pages/Homepage";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
-import Carousel from "./components/Carousel";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.css";
 import AllProducts from "./components/pages/products/AllProducts";
@@ -39,8 +38,7 @@ function App() {
         </Routes>
       </Router>
       <BackToTopButton />
-      <Carousel />
-      <Footer />
+    <Footer/>
     </>
   );
 }

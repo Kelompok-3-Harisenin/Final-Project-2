@@ -1,5 +1,5 @@
 import Header from "../Header";
-
+import CarouselComponent from "../Carousel";
 import Footer from "../Footer";
 
 function Magazine() {
@@ -369,6 +369,7 @@ function Magazine() {
 
       <hr className="border-[1px] border-black w-14  my-4 mx-auto" />
       {/* Akhir Next Page */}
+      <CarouselComponent/>
       <Footer />
     </div>
   );
