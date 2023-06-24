@@ -10,6 +10,16 @@ const AllProductsList = ({
   discountPrice,
   discountPercent,
 }) => {
+  const renderStars = () => {
+    const stars = [];
+    for (let i = 0; i < rating; i++) {
+      stars.push(
+        <Icon.Star color="#FEA974" size={18} className="inline" key={i} />
+      );
+    }
+    return stars;
+  };
+
   return (
     <a
       href={link}
@@ -34,7 +44,7 @@ const AllProductsList = ({
           <Icon.Minus className="inline" /> Rp
           <del className="text-red-500">{discountPrice}</del> {price}
         </h2>
-        <p className="flex justify-center text-md md:text-l ">{rating}</p>
+        <p className="flex justify-center text-md md:text-l">{renderStars()}</p>
       </div>
     </a>
   );
